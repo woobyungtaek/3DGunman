@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8d32f377-619c-4bca-bf72-93f831a5539a}</ProjectGuid>
+    <RootNamespace>GunMan3D</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions);SOLUTION_DIR=R"($(SolutionDir))"</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Window;$(ProjectDir)Assets;$(SolutionDir)lib;..\DXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <StructMemberAlignment>16Bytes</StructMemberAlignment>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;..\DXTK\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Effects11d.lib;BTEngineDX11_x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)..\..\3DEngine\SRC\lib\*.*" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\3DEngine\SRC\FX\*.*" "$(SolutionDir)FX"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\lib\*.*" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\inc\MGNetwork.h" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\inc\Packet.h" "$(SolutionDir)lib"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions);SOLUTION_DIR=R"($(SolutionDir))"</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Window;$(ProjectDir)Assets;$(SolutionDir)lib;..\DXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <StructMemberAlignment>16Bytes</StructMemberAlignment>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;..\DXTK\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Effects11.lib;BTEngineDX11_x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)..\..\3DEngine\SRC\lib\*.*" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\3DEngine\SRC\FX\*.*" "$(SolutionDir)FX"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\lib\*.*" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\inc\MGNetwork.h" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\inc\Packet.h" "$(SolutionDir)lib"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions);SOLUTION_DIR=L"$(SolutionDir)"</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Window;$(ProjectDir)Assets;$(SolutionDir)lib;..\DXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <StructMemberAlignment>16Bytes</StructMemberAlignment>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;..\DXTK\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Effects11d_x64.lib;BTEngineDX11_D_x64.lib;MGNetwork_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)..\..\3DEngine\SRC\lib\*.*" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\3DEngine\SRC\FX\*.*" "$(SolutionDir)FX"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\lib\*.*" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\inc\MGNetwork.h" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\inc\Packet.h" "$(SolutionDir)lib"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions);SOLUTION_DIR=L"$(SolutionDir)"</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Window;$(ProjectDir)Assets;$(SolutionDir)lib;..\DXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <StructMemberAlignment>16Bytes</StructMemberAlignment>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Custom</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib;..\DXTK\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Effects11_x64.lib;BTEngineDX11_x64.lib;MGNetwork_Release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)..\..\3DEngine\SRC\lib\*.*" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\3DEngine\SRC\FX\*.*" "$(SolutionDir)FX"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\lib\*.*" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\inc\MGNetwork.h" "$(SolutionDir)lib"
+xcopy /y "$(SolutionDir)..\..\Network\New_NetworkEngine\inc\Packet.h" "$(SolutionDir)lib"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Assets\GameDataManager.cpp" />
+    <ClCompile Include="Assets\GameManager.cpp" />
+    <ClCompile Include="Assets\GameScene.cpp" />
+    <ClCompile Include="Assets\GunmanEnum.cpp" />
+    <ClCompile Include="Assets\LabelUI.cpp" />
+    <ClCompile Include="Assets\LoadScene.cpp" />
+    <ClCompile Include="Assets\LobbyScene.cpp" />
+    <ClCompile Include="Assets\LobbySceneManager.cpp" />
+    <ClCompile Include="Assets\LoginScene.cpp" />
+    <ClCompile Include="Assets\LoginSceneManager.cpp" />
+    <ClCompile Include="Assets\MapManager.cpp" />
+    <ClCompile Include="Assets\RoomCell.cpp" />
+    <ClCompile Include="Assets\TestScene.cpp" />
+    <ClCompile Include="Window\D3DApp.cpp" />
+    <ClCompile Include="Window\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Assets\GameDataManager.h" />
+    <ClInclude Include="Assets\GameManager.h" />
+    <ClInclude Include="Assets\GameScene.h" />
+    <ClInclude Include="Assets\GunmanEnum.h" />
+    <ClInclude Include="Assets\LabelUI.h" />
+    <ClInclude Include="Assets\LoadScene.h" />
+    <ClInclude Include="Assets\LobbyScene.h" />
+    <ClInclude Include="Assets\LobbySceneManager.h" />
+    <ClInclude Include="Assets\LoginScene.h" />
+    <ClInclude Include="Assets\LoginSceneManager.h" />
+    <ClInclude Include="Assets\MapManager.h" />
+    <ClInclude Include="Assets\RoomCell.h" />
+    <ClInclude Include="Assets\TestScene.h" />
+    <ClInclude Include="Window\D3DApp.h" />
+    <ClInclude Include="Window\pch.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

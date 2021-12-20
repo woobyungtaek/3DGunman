@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{17dd06d3-40c2-44d2-bfd2-4f658841d425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{98cb0a13-2999-45b7-8945-2d5d876daff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Scenes">
+      <UniqueIdentifier>{a4ca207a-b125-46e1-a7c8-515da7e9f56f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Etc">
+      <UniqueIdentifier>{d5322a90-38b2-4b18-ac55-2e8880699a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Game">
+      <UniqueIdentifier>{dac918ac-ea25-41bf-94f6-26928b00f4e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Game\GameSceneObjs">
+      <UniqueIdentifier>{2e0a12d1-b865-4ac2-b4bf-6331df251b4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Game\LoginSceneObjs">
+      <UniqueIdentifier>{e4314506-68f5-4681-9b96-5576720c55f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Game\LobbySceneObjs">
+      <UniqueIdentifier>{d76380ca-1bd3-4e08-82d4-cd2dda3225c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Window\D3DApp.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Window\Main.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\TestScene.cpp">
+      <Filter>Assets\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\LoadScene.cpp">
+      <Filter>Assets\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\LoginScene.cpp">
+      <Filter>Assets\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\GameScene.cpp">
+      <Filter>Assets\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\LobbyScene.cpp">
+      <Filter>Assets\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\GunmanEnum.cpp">
+      <Filter>Assets\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\GameManager.cpp">
+      <Filter>Assets\Game\GameSceneObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\LoginSceneManager.cpp">
+      <Filter>Assets\Game\LoginSceneObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\LobbySceneManager.cpp">
+      <Filter>Assets\Game\LobbySceneObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\RoomCell.cpp">
+      <Filter>Assets\Game\LobbySceneObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\LabelUI.cpp">
+      <Filter>Assets\Game\LobbySceneObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\GameDataManager.cpp">
+      <Filter>Assets\Game\LobbySceneObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\MapManager.cpp">
+      <Filter>Assets\Game\GameSceneObjs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Window\D3DApp.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Window\pch.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\TestScene.h">
+      <Filter>Assets\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\LoadScene.h">
+      <Filter>Assets\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\LoginScene.h">
+      <Filter>Assets\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\LobbyScene.h">
+      <Filter>Assets\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\GameScene.h">
+      <Filter>Assets\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\GunmanEnum.h">
+      <Filter>Assets\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\GameManager.h">
+      <Filter>Assets\Game\GameSceneObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\LoginSceneManager.h">
+      <Filter>Assets\Game\LoginSceneObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\LobbySceneManager.h">
+      <Filter>Assets\Game\LobbySceneObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\RoomCell.h">
+      <Filter>Assets\Game\LobbySceneObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\LabelUI.h">
+      <Filter>Assets\Game\LobbySceneObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\GameDataManager.h">
+      <Filter>Assets\Game\LobbySceneObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\MapManager.h">
+      <Filter>Assets\Game\GameSceneObjs</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
